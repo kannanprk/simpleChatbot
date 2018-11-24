@@ -1,0 +1,58 @@
+// App Global Sass
+// --------------------------------------------------
+//@include custom fonts to match the prototype design pages
+/* ttf font format files supports for Safari, Android, iOS */
+
+
+@font-face {
+  font-family: 'Sansregular';
+  src: url(../assets/fonts/GoogleSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Sansmedium';
+  src: url(../assets/fonts/GoogleSans-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Sansbold';
+  src: url(../assets/fonts/GoogleSans-Bold.ttf) format('truetype');
+}
+
+body {
+  font-family: "Sansregular";
+  background: #fff;
+}
+
+.toolbar-background-md {
+  border-color: #ffffff;
+  background: #fff;
+}
+
+.badge-md {
+  border-radius: 50%;
+  color: #fff;
+  background-color: #4db6ac;
+  font-family: "Sansmedium";
+}
+
+.item-md ion-avatar ion-img, .item-md ion-avatar img {
+  border-radius: 50%;
+  border: 3px solid #e7e7e7;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+}
+
+.loading-md {
+  .loading-wrapper {
+    border-radius: 2px;
+    max-width: 280px;
+    max-height: 90%;
+    color: unset;
+    background:unset;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    padding: 24px; 
+  }
+}

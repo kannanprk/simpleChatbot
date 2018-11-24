@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <div class="docsBg" style="display: inline-flex; margin: 5%; padding-left: 7%;">
+      <ion-title text-center>{{userDetails.name}}</ion-title>
+    </div>
+    <div class="docsBgImage" style="display: inline-flex; float: right;">
+    <ion-buttons end>
+      <img src={{userDetails.image}} class="avatarImage">
+    </ion-buttons>
+    </div>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="mimal-toolbar">
+    <span class="paraStyle">Last seen just now</span>
+  </div>
+  <ion-list no-lines class="docsBg">
+    <ion-item *ngFor="let chats of chatHistory">
+      <div *ngIf="chats.user1">
+        <ion-row class="leftChat">
+          <ion-col>
+            <p text-left text-wrap *ngIf="chats.user1 !== 'assets/media/SampleAudio_0.4mb.mp3'">{{chats.user1}}</p>
+            <button *ngIf="chats.user1 == 'assets/media/SampleAudio_0.4mb.mp3'" ion-button block round color="primary" clear icon-left (tap)="playMediaFile(chats.user1)">
+              <ion-icon name={{playStop}} color="primary"></ion-icon>
+              {{playStop == 'pause' ? 'Stop Audio' : 'Play Audio'}}
+            </button>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div *ngIf="chats.user2">
+        <ion-row class="rightChat">
+          <ion-col>
+            <p text-right text-wrap>{{chats.user2}}</p>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-row class="chatbox">
+    <ion-col col-2>
+      <button ion-button clear color="dark" icon-only>
+        <ion-icon name="md-mic"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-6>
+      <ion-item style="background:transparent;border:none;">
+        <ion-input type="text" placeholder="Your message"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col col-2>
+      <button ion-button clear color="secondary" icon-only>
+        <ion-icon name="happy"></ion-icon>
+      </button>
+    </ion-col>
+    <ion-col col-2>
+      <button ion-button clear color="primary" icon-only>
+        <ion-icon name="attach"></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,43 @@
+<ion-content>
+  <div class="wrapper">
+    <div>
+      <p class="line">Lines</p>
+      <p class="welcome">Welcome back, <br />
+        <span class="signIn">sign in to continue</span> <br />
+        <span class="signIn">to Lines.</span> </p>
+      <form>
+        <fieldset>
+          <div class="cd-block">
+            <input class="email" name="user-email" type="email" placeholder="Email">
+            <svg version="1.1" id="validate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 46 46">
+              <path id="confirm" fill="none" stroke="#36AEE4" stroke-width="2" stroke-miterlimit="10" d="M14.7,23.3l6.6,6.4l10-13.4" />
+            </svg>
+          </div>
+          <div class="cd-block">
+            <input class="password" name="user-passoword" type="password" placeholder="Passoword">
+            <svg version="1.1" id="show_password" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 46 46">
+              <path id="contour" fill="none" stroke="#36AEE4" stroke-width="2" stroke-miterlimit="10" d="M12.1,23.4c0,0,10.5-16,21.8,0
+            C34,23.4,24.7,39.3,12.1,23.4z" />
+              <path id="circle" fill="none" stroke="#36AEE4" stroke-width="2" stroke-miterlimit="10" d="M23.1,20L23.1,20
+            c1.8,0,3.3,1.5,3.3,3.3v0c0,1.8-1.5,3.3-3.3,3.3h0c-1.8,0-3.3-1.5-3.3-3.3v0C19.7,21.5,21.2,20,23.1,20z" />
+              <path id="line" fill="none" stroke="#36AEE4" stroke-width="2" stroke-miterlimit="10" d="M13.9,33.2c0,0,15.7-17.2,18.3-19.6" />
+            </svg>
+          </div>
+          <svg version="1.1" id="way" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 267 46">
+            <path id="path" fill="none" stroke="#36AEE4" stroke-width="2" stroke-miterlimit="10" d="M0,1h239.1c0,0,26.9-1.6,26.9,22
+          c0,23.8-26.9,22-26.9,22H0" />
+          </svg>
+        </fieldset>
+        <!-- <span  name="login">Login</span> -->
+        <ion-input type="submit" Value="Login" class="login" (tap)="login()" name="login">Login</ion-input>
+      </form>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <br>
+  <p class="signUp">Don't have an account? <span style="color:black">Signup</span></p>
+</ion-footer>

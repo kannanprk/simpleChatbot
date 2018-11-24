@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button start ion-button color="primary" clear icon-only menuToggle>
+      <ion-icon name="md-list"></ion-icon>
+      <!-- <img style="width:12%;" src="assets/imgs/sidemenu.png"> -->
+    </button>
+    <div class="docsBgTitle" style="width: 50%; position: absolute; top: 25%;left: 25%;">
+      <ion-title text-center>Chats</ion-title>
+    </div>
+    <div class="docsBgIcon">
+      <ion-buttons end>
+        <button ion-button color="primary" clear icon-only>
+          <ion-icon name="person"></ion-icon>
+        </button>
+      </ion-buttons>
+    </div>
+  </ion-navbar>
+</ion-header>
+<ion-content class="docsBgContent">
+  <ion-list no-lines >
+  <!-- <button ion-button (click)="animateElem()">Click Me!</button> -->
+  <!-- <ion-card #myElement>
+    <ion-card-header>
+      Good Afternoon
+    </ion-card-header>
+    <ion-card-content>
+      How are you?
+    </ion-card-content>
+  </ion-card>  -->
+
+    <ion-item class="menuWrapper" *ngFor="let items of userData;let i = index;" (tap)="navigateChatDetails(items)">
+      <ion-avatar item-start>
+        <img src={{items.image}}>
+        <div class="activeDot" *ngIf="i == '0' || i == '4'"></div>
+      </ion-avatar>
+      <h2 class="nameStyle">{{items.name}}</h2>
+      <p class="paraStyle" text-wrap>{{items.shortSentence}}</p>
+      <ion-badge color="primary" item-end *ngIf="items.badge !== '0'">{{items.badgeVal}}</ion-badge>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>

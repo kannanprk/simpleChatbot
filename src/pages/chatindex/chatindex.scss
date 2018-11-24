@@ -1,0 +1,77 @@
+page-chatindex {
+  .nameStyle {
+    color: #444;
+    font-family: "Sansmedium";
+    font-weight: "500";
+    font-size: 13pt;
+  }
+
+  .paraStyle {
+    color: #9e9e9e;
+    font-family: "Sansregular";
+    font-weight: "400";
+    font-size: 11pt;
+  }
+
+  .activeDot{
+    width: 15px;
+    height: 15px;
+    margin-top: -25%;
+    margin-left: 60%;
+    background: #4db6ac;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(231, 231, 231);
+
+  }
+  @keyframes ChatindexPage {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+  }
+  @keyframes chat {
+    from {
+        left: -102%;
+    }
+    to {
+        left: 0;
+    }
+  }
+  @keyframes chatImage {
+    from {
+        left: -10%;
+    }
+    to {
+        left: 0;
+    }
+  }
+  @keyframes chatTitle {
+    from {
+        left: 0;
+    }
+    to {
+        left: 25%
+    }
+  }
+  .docsBgContent {
+    animation: chat 1s;
+    position: relative;
+    text-align: center;
+  }
+  .docsBgIcon {
+    animation: chatImage 1s;
+    position: relative;
+    text-align: center;
+  }
+  .docsBgTitle {
+    animation: chatTitle 1s;
+    position: relative;
+    text-align: center;
+  }
+  
+
+}
